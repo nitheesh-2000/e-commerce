@@ -1,0 +1,44 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <nav>
+                <ul id="MenuItems">
+                    <li><a href="">Home</a></li>
+                    <li><a href="{% url 'store' %}">store</a></li>
+                    <li><a href="{% url 'login' %}">Account</a></li>
+                </ul>
+            </nav>
+<div class="small-container single-product">
+    <div class="row">
+        <div class="col-2">
+            <img src="{{ product.imageURL }}" width="100%" id="store">
+            
+         
+
+         
+
+        </div>
+        <div class="col-2">
+            <p>{{product.category}}</p>
+           
+            <h1>{{product.name}}</h1>
+         
+            <h4>₹{{product.price}}</h4>
+            
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            
+               
+            <input type="number" value="1">
+            <a href="{% url 'cart' %}" class="btn">Add To Cart</a>
+
+            <h3>Product Details </h3>
+            <br>
+            <p>{{product.description}}</p>
+        </div>
+    </div>
+</div>

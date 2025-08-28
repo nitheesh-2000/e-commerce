@@ -1,0 +1,28 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<div class="navbar">
+    <div class="logo">
+        <a href="#"><img src="{% static 'images/logo1.png' %}" alt="logo" width="125px"></a>
+    </div>
+    <nav>
+        <ul id="MenuItems">
+            <li><a href="">Home</a></li>
+            <li><a href="{% url 'store' %}">store</a></li>
+            <li><a href="{% url 'login' %}">Account</a></li>
+        </ul>
+    </nav>
+    
+    <a href="{% url 'cart' %}"><img src="{% static 'images/cart.png' %}" width="30px" height="30px"></a>
+    <img src="{% static 'images/menu.png' %}" class="menu-icon" onclick="menutoggle()">
+</div>
+<div class="row">
+    <div class="col-2">
+        <h1>Give Your Workout <br> A New Style!</h1>
+        <p>Success isn't always about greatness. It;s about consistency. Consistent <br> hard work gains
+            success. Greatness will come.</p>
+        <a href="" class="btn">Explore Now &#8594;</a>
+    </div>
+    <div class="col-2">
+        <img src="{% static 'images/image1.png' %}">
+    </div>
+</div>
